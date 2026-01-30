@@ -1,0 +1,31 @@
+@use "../variables";
+
+.container {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Mobile Default */
+.container > div {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+
+  border: 8px solid variables.$border-color;
+  border-radius: 8px;
+}
+
+/* Medium Screens (between mobile and 720p) */
+@media (min-width: 480px) and (max-width: 1279px) {
+  .container > div {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+/* Desktop / 720p+ */
+@media (min-width: 1280px) {
+  .container > div {
+    flex: 1 1 calc(33.333% - 10px);
+  }
+}

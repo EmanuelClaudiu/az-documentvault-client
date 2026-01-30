@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./variables";
+
+@font-face {
+  font-family: 'SprinturaDemo'; 
+  src: url('./assets/fonts/SprinturaDemo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'SprinturaDemo', sans-serif;
+  background-color: rgb(40,40,40);
+  color: variables.$text-color;
+}
+
+::selection {
+  background-color: red; /* Your custom highlight color */
+  color: variables.$text-color;               /* The text color when highlighted */
+}
+
+/* For Firefox (older versions) */
+::-moz-selection {
+  background-color: red;
+  color: variables.$text-color;
+}
