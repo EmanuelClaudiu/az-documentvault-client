@@ -1,8 +1,5 @@
-assets/external/
-*.db
-.states
-__pycache__/
-*.py[cod]
-.web
 .venv
+documentvault/__pycache__/
+*.pyc
 .env
+db.*
